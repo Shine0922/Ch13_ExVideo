@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.win7.exvideo.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  點選影片即可撥放"
+            android:textSize="30dp"
+            android:textColor="#000000"/>
+        <ImageView
+            android:id="@+id/imgFront"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/front"/>
+        <ImageView
+            android:id="@+id/imgStop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_toRightOf="@+id/imgFront"
+            android:src="@drawable/stop"/>
+        <ImageView
+            android:id="@+id/imgPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_toRightOf="@+id/imgStop"
+            android:src="@drawable/play"/>
+        <ImageView
+            android:id="@+id/imgPause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_toRightOf="@+id/imgPlay"
+            android:src="@drawable/pause"/>
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_toRightOf="@+id/imgPause"
+            android:src="@drawable/next"/>
+        <ImageView
+            android:id="@+id/imgEnd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtVideo"
+            android:layout_toRightOf="@+id/imgNext"
+            android:src="@drawable/end"/>
+        <SurfaceView
+            android:id="@+id/sufVideo"
+            android:layout_marginLeft="20dp"
+            android:layout_width="350dp"
+            android:layout_height="280dp"
+            android:layout_below="@+id/imgEnd"/>
+        <TextView
+            android:id="@+id/txtList"
+            android:layout_below="@+id/sufVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  影片清單 : "
+            android:textColor="#000000"
+            android:textSize="25dp"/>
+        <ListView
+            android:id="@+id/listVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtList"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
